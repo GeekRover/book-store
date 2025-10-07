@@ -4,12 +4,12 @@ import { Link } from "react-router";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="z-1">
       <header className="bg-white">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
-              <Link to='/'><p className="block text-teal-600" href="">
+              <Link to='/'><p className="block text-teal-600">
                 <span className="sr-only">Home</span>
                 <img src={icon} className="size-[50px]" alt="" />
               </p></Link>
