@@ -1,126 +1,22 @@
-import React from "react";
-import icon from "../../public/book.svg";
-import { Link } from "react-router";
+import React from 'react';
+import icon from "../../public/book.svg"
+import { Link } from 'react-router';
 
 const Navbar = () => {
   return (
-    <div className="z-1">
-      <header className="bg-white">
-        <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <div className="md:flex md:items-center md:gap-12">
-              <Link to='/'><p className="block text-teal-600">
-                <span className="sr-only">Home</span>
-                <img src={icon} className="size-[50px]" alt="" />
-              </p></Link>
-            </div>
+    <div>
+      <nav className='flex justify-between items-center py-2.5'>
+        <img src={icon} className='size-12' alt="" />
+        <ul className='flex gap-5 items-center'>
+          <Link to='/'><li>Home</li></Link>
+          <Link to='price'><li>Pricing</li></Link>
+          <Link to='step'><li>Steps</li></Link>
+        </ul>
+        <button className='btn bg-linear-to-br from-purple-400 via-pink-500 to-pink-700 rounded-lg text-white font-medium'>
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg>
+          Get Started</button>
 
-            <div className="hidden md:block">
-              <nav aria-label="Global">
-                <ul className="flex items-center gap-6 text-sm">
-                  <li>
-                    <Link to="about">
-                      <p className="text-gray-500 transition hover:text-gray-500/75">
-                        {" "}
-                        About{" "}
-                      </p>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      href=""
-                    >
-                      {" "}
-                      Careers{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      href=""
-                    >
-                      {" "}
-                      History{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      href=""
-                    >
-                      {" "}
-                      Services{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      href=""
-                    >
-                      {" "}
-                      Projects{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      href=""
-                    >
-                      {" "}
-                      Blog{" "}
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="sm:flex sm:gap-4">
-                <a
-                  className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm"
-                  href=""
-                >
-                  Login
-                </a>
-
-                <div className="hidden sm:flex">
-                  <a
-                    className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-                    href=""
-                  >
-                    Register
-                  </a>
-                </div>
-              </div>
-
-              <div className="block md:hidden">
-                <button className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="size-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      </nav>
     </div>
   );
 };
